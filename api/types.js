@@ -47,3 +47,8 @@ export interface Status {
   /** Only in case of Socket - URL of the socket */
   url?: string;
 }
+
+export interface API {
+  environmentId: number;
+  methodId: number;
+}
