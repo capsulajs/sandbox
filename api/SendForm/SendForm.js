@@ -1,11 +1,12 @@
 // @flow
 import { Observable } from 'rxjs';
+import { SendInput } from "../types";
 
 /**
  * SendForm service can be used to display a form that will send requests to API.
  * The form exposes a method to change its input from outside.
  */
-interface SendForm {
+export interface SendForm {
   /**
    * Provides all requests sent from the form
    * @return An Observable sequence emitting all needed information every time the form is submitted
@@ -25,18 +26,9 @@ interface SendForm {
 
 interface SendRequest {}
 
-interface SendInput {
-  /** Content of the input */
-  input: string;
-  /** Optional - Can be used to tag all events that derived from this request with a specific group id */
-  groupId?: number;
-}
-
 interface InputRequest {
   /** Content of the input */
   input: string
 }
 
 interface RenderRequest {}
-
-export default SendForm;
