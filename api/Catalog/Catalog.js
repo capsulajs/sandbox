@@ -1,6 +1,6 @@
 // @flow
 import { Observable } from 'rxjs';
-import { API } from "../types";
+import { API } from "../types/types";
 
 /**
  * Catalog service can be used to display an API catalog of several environments

@@ -1,6 +1,6 @@
 // @flow
 import { Observable } from 'rxjs';
-import { Event, SendInput } from "../types";
+import { Event, SendInput } from "../types/types";
 
 /**
  * Logs service can be used to display a logs of events

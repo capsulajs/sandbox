@@ -1,6 +1,6 @@
 // @flow
 import { Observable } from 'rxjs';
-import { SendInput } from "../types";
+import { SendInput } from "../types/types";
 
 /**
  * SendForm service can be used to display a form that will send requests to API.

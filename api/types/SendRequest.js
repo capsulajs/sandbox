@@ -1,5 +1,5 @@
 // @flow
-import { ConnectionMode, Socket } from "../types";
+import { ConnectionMode, Socket } from "./types";
 
 type SendRequest = SendRequestSocket | SendRequestMicroFrontend | SendRequestHTTP;
 

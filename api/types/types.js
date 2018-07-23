@@ -1,6 +1,6 @@
 // @flow
 
-import SendRequest from "./APIClient/SendRequest";
+import SendRequest from "./SendRequest";
 
 export type Socket = 'Websocket' | 'Rsocket' | 'SocketIO' | 'SockJS';
 export type ConnectionMode = Socket | 'http' | 'microFrontend';

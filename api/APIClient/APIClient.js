@@ -1,7 +1,7 @@
 // @flow
 import { Observable } from 'rxjs';
-import SendRequest from './SendRequest';
-import { ConnectRequest, Event, Status } from "../types";
+import SendRequest from '../types/SendRequest';
+import { ConnectRequest, Event, Status } from "../types/types";
 
 /**
  * APIClient service can be used to
