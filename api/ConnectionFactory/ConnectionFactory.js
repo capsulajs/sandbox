@@ -3,11 +3,11 @@ import { Observable } from 'rxjs';
 import { SendRequest, ConnectRequest, DisconnectRequest, SendResponse, StatusRequest, LogsRequest, Event, Status } from "./types";
 
 /**
- * APIClient service can be used to
+ * ConnectionFactory service can be used to
  *    - open and close connections to one or several environments
  *    - send request over opened connection
- *    - receive complete log of request and response events
- *    - receive complete log of connection events
+ *    - subscribe to all request and response events
+ *    - subscribe to all connection events
  */
 export interface ConnectionFactory {
   /**
