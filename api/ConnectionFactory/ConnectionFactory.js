@@ -1,7 +1,6 @@
 // @flow
 import { Observable } from 'rxjs';
-import SendRequest from '../types/SendRequest';
-import { ConnectRequest, Event, Status } from "../types/types";
+import { SendRequest, ConnectRequest, DisconnectRequest, SendResponse, StatusRequest, LogsRequest, Event, Status } from "./types";
 
 /**
  * APIClient service can be used to
@@ -10,7 +9,7 @@ import { ConnectRequest, Event, Status } from "../types/types";
  *    - receive complete log of request and response events
  *    - receive complete log of connection events
  */
-export interface APIClient {
+export interface ConnectionFactory {
   /**
    * Open a connection for a given environment using the specified mode
    * @return void
@@ -32,19 +31,10 @@ export interface APIClient {
    */
   status(r: StatusRequest): Observable<Status>;
   /**
-   * Provides log of all requests and responses
+   * Provides all requests and responses events
    * @return An Observable sequence emitting an event for each request sent and response received, for all environments
    */
-  logs(r: LogsRequest) : Observable<Event>;
+  listen(r: LogsRequest) : Observable<Event>;
 }
 
-interface DisconnectRequest {
-  /** ID of the environment for which the connection should be closed*/
-  environmentId: number;
-}
 
-interface SendResponse {}
-
-interface StatusRequest {}
-
-interface LogsRequest {}

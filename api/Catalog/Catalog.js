@@ -1,6 +1,6 @@
 // @flow
 import { Observable } from 'rxjs';
-import { API } from "../types/types";
+import { AddRequest, RemoveRequest, SelectedRequest, ComponentRequest, API } from "./types";
 
 /**
  * Catalog service can be used to display an API catalog of several environments
@@ -22,19 +22,8 @@ export interface Catalog {
    */
   selected: (r: SelectedRequest) => Observable<API>;
   /**
-   * The method return a promise to the component to render
+   * The method return a promise to the UI component
    * @return Component
    */
-  render: (r: RenderRequest) => Promise<Component>;
+  component: (r: ComponentRequest) => Promise<Component>;
 }
-
-interface AddRequest {
-  environmentId: number
-}
-interface RemoveRequest {
-  environmentId: number
-}
-
-interface SelectedRequest {}
-
-interface RenderRequest {}

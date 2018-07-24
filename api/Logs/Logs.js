@@ -1,6 +1,7 @@
 // @flow
 import { Observable } from 'rxjs';
-import { Event, SendInput } from "../types/types";
+import { ClearRequest, LogsRequest, LogRequest, SendRequest, ComponentRequest } from "./types";
+import { SendInput } from "../SendForm/types";
 
 /**
  * Logs service can be used to display a logs of events
@@ -27,23 +28,8 @@ export interface Logs {
    */
   send: (r: SendRequest) => Observable<SendInput>;
   /**
-   * The method return a promise to the component to render
+   * The method return a promise to the UI component
    * @return Component
    */
-  render: (r: RenderRequest) => Promise<Component>;
+  component: (r: ComponentRequest) => Promise<Component>;
 }
-
-interface ClearRequest {
-  /** Optional - if specified, it will clear only logs tagged with this group id*/
-  groupId?: number;
-}
-interface LogsRequest {
-  /** Observable of events to add to the logs*/
-  logs: Observable<Event>;
-}
-interface LogRequest {
-  /** Single event to add to the logs */
-  event: Event;
-}
-interface SendRequest {}
-interface RenderRequest {}
