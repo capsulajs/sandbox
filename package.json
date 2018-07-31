@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "flow": "^0.2.3",
+    "rxjs": "^6.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.77.0",
+    "jsdoc": "~3.5.5"
+  }
+}
